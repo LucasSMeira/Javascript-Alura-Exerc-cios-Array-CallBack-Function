@@ -10,7 +10,7 @@ const executarOperacaoEmArray = (array, callback) => {
 };
 
 const callback = (num) => {
-    console.log(num * 5);
+    console.log(num * 3);
 }
 
 executarOperacaoEmArray(array, callback);
@@ -55,4 +55,13 @@ const procurarAluno = (aluno) => {
 procurarAluno('Fax');
 procurarAluno('João Silva');
 
+const numeros = [6, 9, 12, 15, 18, 21];
 
+numeros.forEach((element) => { 
+    const resultado = element * 3;
+    console.log(resultado);
+});
+
+const resultadosMultiplicacao = numeros.map(numero => numero * 3);
+const indice = resultadosMultiplicacao.findIndex(elemento => elemento === 18);
+console.log(`O índice do número 18 é: ${indice}`);
