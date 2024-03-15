@@ -28,3 +28,31 @@ const verificaNum = (element) => {
 
 verificaNum(4);
 verificaNum(55);
+
+const nomesTurmaA = [
+    'João Silva',
+    'Maria Santos',
+    'Pedro Almeida'
+];
+    
+const nomesTurmaB = [
+    'Carlos Oliveira',
+    'Ana Souza',
+    'Lucas Fernandes'
+];
+
+const todasAsTurmas = nomesTurmaA.concat(nomesTurmaB);
+
+const procurarAluno = (aluno) => {
+    const nomeEncontrado = todasAsTurmas.find(nome => nome.toLowerCase() === aluno.toLowerCase());
+    if (nomeEncontrado) {
+        console.log(`O aluno consta na turma e seu nome é ${aluno}`);
+    } else {
+        console.log(`Aluno não encontrado`);
+    }
+}
+
+procurarAluno('Fax');
+procurarAluno('João Silva');
+
+
